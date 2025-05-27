@@ -1,0 +1,26 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav mode="side" opened>
+    <div class="logo-container">
+      <img src="assets/logo_solo.png" alt="AdOrbit Logo" />
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a mat-list-item routerLink="/campaigns" routerLinkActive="active">Campañas</a>
+      <a mat-list-item routerLink="/settings" routerLinkActive="active">Configuración</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span class="toolbar-title">AdOrbit</span>
+      <span class="spacer"></span>
+      <button mat-icon-button aria-label="Salir">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

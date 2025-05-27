@@ -1,0 +1,27 @@
+.layout-container {
+  height: 100vh;
+}
+
+.logo-container {
+  padding: 1rem;
+  text-align: center;
+
+  img {
+    width: 60px;
+  }
+}
+
+.toolbar-title {
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-content {
+  padding: 1rem;
+  background: #0b1f3a;
+  min-height: calc(100vh - 64px);
+  color: white;
+}

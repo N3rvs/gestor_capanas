@@ -1,0 +1,43 @@
+:host {
+  font-family: 'Segoe UI', sans-serif;
+}
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #000000, #0b1f3a, #00182f);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #00bcd4;
+}
+
+.description {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  color: #cbd5e1;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
