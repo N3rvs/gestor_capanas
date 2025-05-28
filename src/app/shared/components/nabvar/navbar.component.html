@@ -1,15 +1,17 @@
 <nav class="navbar">
-  <div class="navbar-logo">
-    <img src="assets/adorbit-logo.png" alt="AdOrbit" />
+  <div class="navbar-inner">
+    <div class="navbar-logo">
+      <img src="assets/adorbit-logo.png" alt="AdOrbit Logo" />
+    </div>
+
+    <ul class="navbar-links">
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/nosotros">Nosotros</a></li>
+      <li><a routerLink="/servicios">Servicios</a></li>
+      <li><a routerLink="/contenidos">Contenidos</a></li>
+      <li><a routerLink="/soporte">Soporte</a></li>
+    </ul>
+
+    <button mat-stroked-button color="warn" routerLink="/login">ACCEDER</button>
   </div>
-
-  <ul class="navbar-links">
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/nosotros">Nosotros</a></li>
-    <li><a routerLink="/servicios">Servicios</a></li>
-    <li><a routerLink="/contenidos">Contenidos</a></li>
-    <li><a routerLink="/soporte">Soporte</a></li>
-  </ul>
-
-  <button mat-stroked-button color="warn" routerLink="/login">ACCEDER</button>
 </nav>
