@@ -1,0 +1,82 @@
+.testimonios-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: radial-gradient(circle at top left, #254044, #000000);
+
+  .titulo {
+    color: #00e3ff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-button {
+      color: rgb(0, 208, 255);
+    }
+
+.testimonio-card {
+  width: 360px;              // más ancho
+  min-height: 200px;         // menos alto
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  mat-card-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    color: #00e3ff;
+  }
+
+  mat-card-subtitle {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+  }
+
+  mat-card-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+}
+
+
+
+// .card-group {
+//   display: flex;
+//   gap: 1rem;
+//   flex-wrap: nowrap;
+.card-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-height: 360px; // asegura altura constante
+
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}}}
+

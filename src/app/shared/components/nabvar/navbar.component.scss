@@ -6,16 +6,12 @@
   z-index: 1000;
   padding: 1rem 2rem;
   font-weight: bold;
+  font-size: 20px;
   height: 80px;
-  overflow: visible;
-
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(51, 51, 51, 0.5);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
-
-  overflow: visible; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-inner {
@@ -24,31 +20,108 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1280px;
-  padding: 0 2rem;
-  position: relative;
 }
 
 .navbar-logo img {
-  height: 270px;       
-  margin-bottom: -10px; 
-  transition: transform 0.3s ease;
+  height: 280px;
 }
 
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-.navbar-links {
-  list-style: none;
+/* Mostrar enlaces horizontales solo en desktop */
+.desktop-menu {
   display: flex;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
+  list-style: none;
+}
 
-  li a {
-    text-decoration: none;
+.desktop-menu li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.desktop-menu li a:hover {
+  color: #03a3ff;
+}
+
+/* Hamburguesa oculta en desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar menú móvil */
+.mobile-menu {
+  display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* MODO MÓVIL */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.7);
+    padding: 5rem 1.5rem 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    transition: right 0.3s ease;
+    z-index: 1002;
+    overflow-y: auto;
+  }
+
+  .mobile-menu li a {
+    font-size: 16px;
     color: white;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
 
-    &:hover {
-      color: rgb(3, 163, 255);
-    }
+  .mobile-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #03a3ff;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+    display: flex;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
   }
 }

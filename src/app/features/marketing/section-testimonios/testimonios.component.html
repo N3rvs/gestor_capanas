@@ -1,0 +1,24 @@
+<section class="testimonios-section">
+  <h2 class="titulo">Testimonios Orbits</h2>
+
+  <div class="carousel-container">
+    <button mat-icon-button class="nav-button" (click)="prev()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <div class="card-group">
+      <mat-card class="testimonio-card glass" *ngFor="let t of currentGroup">
+        <img [src]="t.foto" alt="Avatar" class="avatar" />
+        <mat-card-title>{{ t.nombre }}</mat-card-title>
+        <mat-card-subtitle>{{ t.rol }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ t.comentario }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <button mat-icon-button class="nav-button" (click)="next()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</section>

@@ -10,23 +10,34 @@
       </h1>
 
       <p class="description">
-        Con AdOrbit puedes lanzar, monitorear y optimizar tus campañas publicitarias de Google y Meta desde un solo
-        panel. Rápido. Visual. Inteligente.
+        Con AdOrbit puedes lanzar, monitorear y optimizar tus campañas publicitarias de Google y Meta desde un solo panel. Rápido. Visual. Inteligente.
       </p>
+    <div class="pregunta-cuenta">
+  <button class="input-estilo-boton" (click)="abrirModalEleccion()">
+    {{ cuentaSeleccionada || 'ELIGE TU CUENTA' }}
+  </button>
+</div>
+
     </div>
 
+    <!-- Pregunta inicial -->
+
+
+  
     <div class="alien">
       <img src="assets/aliendev.png" alt="Desarrollador alienígena" />
-
       <div class="floating-icons">
         <img src="assets/adds.png" alt="Logos Dalí flotando" />
       </div>
-
     </div>
   </div>
 </div>
+
 <app-section-promociona></app-section-promociona>
 <app-section-lanzamiento></app-section-lanzamiento>
+<app-testimonios></app-testimonios>
+
+
 <app-footer></app-footer>
 
 <a
