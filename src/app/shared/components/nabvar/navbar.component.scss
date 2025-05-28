@@ -70,9 +70,17 @@
 
 /* MODO MÓVIL */
 @media (max-width: 768px) {
+
   .desktop-menu {
     display: none;
   }
+  .navbar {
+  z-index: 1010;
+}
+
+.navbar-logo img {
+height: 200px;
+}
 
   .hamburger {
     display: block;
