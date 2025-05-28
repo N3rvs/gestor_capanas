@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #000000, #0b1f3a, #00182f);
+  background: linear-gradient(135deg, #5e0f0f, #0b1f3a, #00182f);
   color: white;
   align-items: center;
   justify-content: center;
@@ -41,9 +41,9 @@
   .description {
     opacity: 0;
     transform: translateY(10px);
-    animation: fadeInUp 1.5s ease forwards;
+    animation: fadeInUp 1.25s ease forwards;
     animation-delay: 0.5s;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #cbd5e1;
     max-width: 600px;
     margin-bottom: 2rem;
@@ -52,10 +52,11 @@
 
 .alien {
   position: relative;
-  flex: 1 1 100px;
+  flex: 1 1 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: ceter;
+  margin-left: 3rem;
 
   img {
     width: 100%;
@@ -67,17 +68,24 @@
   .floating-icons {
     position: absolute;
     top: -40px; 
-    left: 45%;
+    right:45%;
     transform: translateX(-100%);
     z-index: 2;
-
+   animation: floatY 3s ease-in-out infinite;
+    
     img {
-      width: 600px;
+      width: 30rem;
+  
       max-width: 100%;
       pointer-events: none;
       user-select: none;
     }
   }
+
+@keyframes floatY {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 @keyframes fadeInUp {
@@ -85,4 +93,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
+}}
