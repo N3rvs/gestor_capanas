@@ -46,7 +46,7 @@
 }
 
 .desktop-menu li a:hover {
-  color: #03a3ff;
+  color:  #02cdf6;
 }
 
 /* Hamburguesa oculta en desktop */
@@ -114,7 +114,7 @@ height: 200px;
 
   .mobile-menu li a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #03a3ff;
+    color: #02cdf6;
   }
 
   .mobile-menu.open {
@@ -132,4 +132,62 @@ height: 200px;
     background-color: rgba(0,0,0,0.5);
     z-index: 1001;
   }
+}
+
+
+.login-desktop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  border: 2px solid  #02cdf6;
+  color: #02cdf6;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer; 
+}
+
+.login-desktop:hover {
+  background-color: #02cdf6;
+  color: white;
+  box-shadow: 0 0 10px  #02cdf6, 0 0 20px  #02cdf6;
+  transform: scale(1.03);
+}
+
+.login-mobile {
+  display: none;
+}
+
+.alien-icon-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.alien-icon-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.7))
+          drop-shadow(0 0 16px rgba(0, 255, 255, 0.5));
+}
+
+.login-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .login-mobile {
+    display: inline-flex;
+    
+  }
+
+  .login-desktop {
+    display: none;
+  }
+  
 }

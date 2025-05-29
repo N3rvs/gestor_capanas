@@ -19,7 +19,7 @@
   .lanzamiento-image img {
     width: 100%;
     max-width: 800px;
-    filter: drop-shadow(0 0 10px #00e5ff);
+    filter: drop-shadow(0 0 10px #02cdf6);
   }
 
   .lanzamiento-text {
@@ -32,7 +32,7 @@
       line-height: 1.3;
 
       span {
-        color: #00e5ff;
+        color:  #02cdf6;
         display: block;
       }
     }
@@ -47,7 +47,7 @@
     .apply-btn {
       margin-top: 2rem;
       padding: 0.75rem 1.5rem;
-      background-color: #00e5ff;
+      background-color: #02cdf6;
       border: none;
       border-radius: 25px;
       font-weight: bold;

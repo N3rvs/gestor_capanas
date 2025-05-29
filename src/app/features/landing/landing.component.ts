@@ -8,8 +8,8 @@ import { SectionPromocionaComponent } from '../marketing/section-promociona/sect
 import { SectionLanzamientoComponent } from '../marketing/section-lanzamiento/section-lanzamiento.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { TestimoniosComponent } from '../marketing/section-testimonios/testimonios.component';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalEleccionComponent } from '../../shared/components/modal-eleccion/modal-eleccion.component';
+
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
@@ -26,7 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     SectionLanzamientoComponent,
     FooterComponent,
     TestimoniosComponent,
-    ModalEleccionComponent,
+
     MatFormFieldModule,
     MatInputModule
   ],
@@ -37,21 +37,6 @@ export class LandingComponent {
   logoPath = 'assets/adorbit-logo.png';
   cuentaSeleccionada: string | null = null; // 👈 esta línea soluciona el error
 
-  constructor(private router: Router, private dialog: MatDialog) {}
-
-  abrirModalEleccion() {
-    const dialogRef = this.dialog.open(ModalEleccionComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.cuentaSeleccionada = result === 'musica' ? '🎵 Música' : '🛍️ Comercio';
-
-        setTimeout(() => {
-          this.router.navigate([result === 'musica' ? '/registro-musica' : '/registro-comercio']);
-        }, 300);
-      }
-    });
-  }
 }
 
 

@@ -27,7 +27,7 @@
       width: 100%;
       height: auto;
       max-width: 100%;
-      filter: drop-shadow(0 0 10px #03c0fa);
+      filter: drop-shadow(0 0 10px #02cdf6);
       display: block;
     }
   }
@@ -44,7 +44,7 @@
       margin-bottom: 1rem;
 
       .resaltado {
-        color: #03c0fa;
+        color: #02cdf6;
       }
     }
 
@@ -81,7 +81,7 @@
       transition: background 0.3s ease;
 
       &:hover {
-        background-color: #03c0fa;
+        background-color: #02cdf6;
         color: #000;
       }
     }

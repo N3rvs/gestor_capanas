@@ -3,8 +3,6 @@
     <div class="navbar-logo">
       <img src="assets/adorbit-logo.png" alt="AdOrbit Logo" />
     </div>
-
-    <!-- Enlaces (desktop) -->
     <ul class="navbar-links desktop-menu">
       <li><a routerLink="/">Inicio</a></li>
       <li><a routerLink="/nosotros">Nosotros</a></li>
@@ -12,14 +10,20 @@
       <li><a routerLink="/contenidos">Contenidos</a></li>
       <li><a routerLink="/soporte">Soporte</a></li>
     </ul>
+    
+    <button mat-stroked-button color="warn" class="login-desktop" routerLink="/login">ACCEDER</button>
 
-    <!-- Botones: hamburguesa + login -->
-    <div class="navbar-actions">
-      <button class="hamburger" (click)="menuAbierto = !menuAbierto">&#9776;</button>
-      <button mat-stroked-button color="warn" routerLink="/login">ACCEDER</button>
-    </div>
-  </div>
-</nav>
+<div class="navbar-actions">
+  <button class="hamburger" (click)="menuAbierto = !menuAbierto">&#9776;</button>
+
+<a routerLink="/login" class="login-mobile" aria-label="Login">
+  <img src="assets/login.png" alt="Login icon" class="alien-icon-img" />
+</a>
+
+
+
+
+</div>
 
 <!-- Menú lateral (solo móvil) -->
 <ul class="mobile-menu" [class.open]="menuAbierto">
