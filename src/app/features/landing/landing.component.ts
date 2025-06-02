@@ -4,12 +4,10 @@ import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NavbarComponent } from '../../shared/components/nabvar/navbar.component';
-import { SectionPromocionaComponent } from '../marketing/section-promociona/section-promociona.component';
-import { SectionLanzamientoComponent } from '../marketing/section-lanzamiento/section-lanzamiento.component';
+import { SectionPromocionaComponent } from './marketing/section-promociona/section-promociona.component';
+import { SectionLanzamientoComponent } from './marketing/section-lanzamiento/section-lanzamiento.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
-import { TestimoniosComponent } from '../marketing/section-testimonios/testimonios.component';
-
-
+import { TestimoniosComponent } from './marketing/section-testimonios/testimonios.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
@@ -26,7 +24,6 @@ import { MatInputModule } from '@angular/material/input';
     SectionLanzamientoComponent,
     FooterComponent,
     TestimoniosComponent,
-
     MatFormFieldModule,
     MatInputModule
   ],
@@ -35,8 +32,13 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class LandingComponent {
   logoPath = 'assets/adorbit-logo.png';
-  cuentaSeleccionada: string | null = null; // 👈 esta línea soluciona el error
+  cuentaSeleccionada: string | null = null;
 
+  constructor(private router: Router) { }
+
+  irASeleccionCuenta() {
+    this.router.navigate(['/cuentas']);
+  }
 }
 
 

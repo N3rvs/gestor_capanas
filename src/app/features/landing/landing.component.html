@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
-
+<div class="particles-bg"></div>
 <div class="landing-container">
   <div class="content-row">
     <div class="text-content">
       <h1 class="title">
-        Gestiona tus campañas<br />
+        Lanza, monitorea y optimiza tus campañas publicitarias<br />
         <span class="highlight">como un profesional</span>
       </h1>
 
@@ -14,14 +14,16 @@
         intuitivo, rápido y visual que te permite tomar decisiones inteligentes
         en menos tiempo y con mayor impacto.
       </p>
+
       <div class="pregunta-cuenta">
-        <button class="input-estilo-boton" >
+        <button class="input-estilo-boton" (click)="irASeleccionCuenta()">
           crea tu cuenta
         </button>
       </div>
     </div>
-    <div class="alien">
-      <img src="assets/aliendev.png" alt="Desarrollador alienígena" />
+
+    <!-- Íconos paralelos flotando -->
+    <div class="visual-content">
       <div class="floating-icons">
         <img src="assets/adds.png" alt="Logos Dalí flotando" />
       </div>
@@ -29,17 +31,14 @@
   </div>
 </div>
 
+<!-- Secciones siguientes del landing -->
 <app-section-promociona></app-section-promociona>
 <app-section-lanzamiento></app-section-lanzamiento>
 <app-testimonios></app-testimonios>
-
 <app-footer></app-footer>
 
-<a
-  class="whatsapp-float"
+<a class="whatsapp-float"
   href="https://wa.me/573001234567?text=Hola%20AdOrbit%2C%20quiero%20más%20información%20sobre%20campañas"
-  target="_blank"
-  aria-label="Contáctanos por WhatsApp"
->
+  target="_blank" aria-label="Contáctanos por WhatsApp">
   <img src="assets/whatsapp-svgrepo-com.svg" alt="WhatsApp" />
 </a>

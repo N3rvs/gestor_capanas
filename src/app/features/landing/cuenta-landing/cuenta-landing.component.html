@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<section class="seccion comercio">
+  <div class="contenido">
+    <img src="assets/agencia.png" alt="Comercio/Agencia">
+    <div class="texto">
+      <h2>Cuenta para Comerciante o Agencia</h2>
+      <p>Gestiona múltiples campañas de forma profesional desde un solo lugar.</p>
+      <ul>
+        <li><mat-icon>groups</mat-icon> Manejo multi-cliente</li>
+        <li><mat-icon>insights</mat-icon> Reportes por campaña</li>
+        <li><mat-icon>auto_graph</mat-icon> Automatizaciones</li>
+      </ul>
+      <button mat-raised-button color="accent" (click)="crearCuenta('comercio')">Comercio</button>
+    </div>
+  </div>
+</section>
+<!-- Sección: Músico -->
+<section class="seccion musico">
+  <div class="contenido">
+    <div class="texto">
+      <h2>Cuenta para Músicos</h2>
+      <p>Promociona tus lanzamientos musicales, gestiona campañas en Spotify, YouTube y TikTok.</p>
+      <ul>
+        <li><mat-icon>campaign</mat-icon> Anuncios por lanzamiento</li>
+        <li><mat-icon>bar_chart</mat-icon> Dashboard visual</li>
+        <li><mat-icon>group</mat-icon> Alcance y conexión con fans</li>
+      </ul>
+      <button mat-raised-button color="primary" (click)="crearCuenta('musico')">Soy músico</button>
+    </div>
+    <img src="assets/musico.png" alt="Músico">
+  </div>
+</section>
+<section class="seccion comparativa">
+  <div class="contenido">
+    <h2>¿Qué cuenta se adapta mejor a ti?</h2>
+    <p class="descripcion">
+      Explora las diferencias entre las cuentas para Músicos y Comerciales/Agencias. Cada una ofrece herramientas y dashboards pensados para necesidades específicas.
+    </p>
+
+    <div class="comparativa-grid">
+      <!-- Carta Músico -->
+      <div class="bloque">
+        <h3><mat-icon color="primary">music_note</mat-icon> Cuenta Músico</h3>
+        <p class="subtitulo">Ideal para artistas y creadores de contenido musical.</p>
+        <ul>
+          <li><mat-icon color="primary">campaign</mat-icon> Promoción de lanzamientos</li>
+          <li><mat-icon color="primary">bar_chart</mat-icon> Dashboard visual por canción</li>
+          <li><mat-icon color="primary">groups</mat-icon> Alcance y conexión con fans</li>
+         
+          <li><mat-icon color="primary">person</mat-icon> Enfocado en marca personal</li>
+        </ul>
+      </div>
+
+      <!-- Carta Comercial -->
+      <div class="bloque">
+        <h3><mat-icon color="accent">business</mat-icon> Cuenta Comercial / Agencia</h3>
+        <p class="subtitulo">Pensada para negocios, marcas o agencias con múltiples campañas.</p>
+        <ul>
+          <li><mat-icon color="accent">dashboard</mat-icon> Múltiples dashboards por cliente</li>
+          <li><mat-icon color="accent">insights</mat-icon> Reportes avanzados y detallados</li>
+          <li><mat-icon color="accent">group</mat-icon> Gestión multiusuario</li>
+          <li><mat-icon color="accent">autorenew</mat-icon> Automatización de campañas</li>
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="testimonios">
+  <app-testimonios></app-testimonios>
+</section>
+
+<app-footer></app-footer>

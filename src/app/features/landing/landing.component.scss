@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #5e0f0f, #0b1f3a, #00182f);
+  background: linear-gradient(135deg, #360038, #0b1f3a, #00182f);
   color: white;
   align-items: flex-start;
   justify-content: center;
@@ -51,33 +51,28 @@
   }
 }
 
-.alien {
-  position: relative;
+.visual-content {
   flex: 1 1 500px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-
-  img {
-    width: 100%;
-    max-width: 700px;
-    border-radius: 1rem;
-    z-index: 1;
-  }
+  position: relative;
 
   .floating-icons {
-    position: absolute;
-    top: -10%;
-    right: 50%;
-    transform: translateX(-100%);
-    z-index: 2;
     animation: floatY 3s ease-in-out infinite;
+    position: relative;
 
     img {
-      width: 30rem;
+      width: 60rem;
       max-width: 100%;
       pointer-events: none;
       user-select: none;
+      filter: drop-shadow(0 0 12px rgba(0, 188, 212, 0.35));
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
     }
   }
 }
@@ -88,7 +83,7 @@
 
   .input-estilo-boton {
     background-color: #00bcd4;
-    color: #fff;
+    color: #070707;
     border: none;
     padding: 0.6rem 1.5rem;
     border-radius: 2rem;
@@ -106,9 +101,15 @@
 }
 
 @keyframes floatY {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes fadeInUp {
@@ -118,7 +119,6 @@
   }
 }
 
-/* ✅ RESPONSIVE MEDIA QUERY */
 @media (max-width: 768px) {
   .landing-container {
     align-items: center;
@@ -148,7 +148,13 @@
     }
   }
 
-  .floating-icons img {
-    width: 18rem;
+  .visual-content {
+    justify-content: center;
+    margin-top: 2rem;
+
+    .floating-icons img {
+      width: 18rem;
+    }
   }
 }
+

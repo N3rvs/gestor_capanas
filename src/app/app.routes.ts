@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './features/auth/pages/login.component';
 
 export const routes: Routes = [
   {
@@ -7,10 +6,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/landing/landing.component').then((m) => m.LandingComponent),
   },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
+ 
+{
+  path: 'cuentas',
+  loadComponent: () => import('./features/landing/cuenta-landing/cuenta-landing.component').then(m => m.CuentaLandingComponent ),
+},
+
+
   {
     path: '',
     redirectTo: 'landing',
@@ -26,12 +28,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/dashboard/dashboard.component').then((m) => m.DashboardComponent),
       },
-    //   {
-    //     path: 'campaigns',
-    //     loadComponent: () =>
-    //       import('./features/campaigns').then((m) => m.CampaignsComponent),
-    //   },
-  
+      //   {
+      //     path: 'campaigns',
+      //     loadComponent: () =>
+      //       import('./features/campaigns').then((m) => m.CampaignsComponent),
+      //   },
+
     ]
   }
 ];
