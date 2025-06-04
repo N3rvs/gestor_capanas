@@ -1,0 +1,330 @@
+.registro-page {
+  display: flex;
+  height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+
+  .registro-left {
+    width: 50%;
+     background-image: url('/assets/registro.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    .logo {
+      width: 420px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 12px #000000);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #00d2ff;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #cbd5e1;
+      max-width: 320px;
+    }
+  }
+
+  .registro-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+.home-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 20;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 210, 255, 0.15);
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: #00d2ff;
+    text-decoration: none;
+    box-shadow: 0 0 6px rgba(0, 210, 255, 0.3);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 210, 255, 0.3);
+    }
+
+    mat-icon {
+      font-size: 24px;
+    }
+  }
+}
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      mat-form-field {
+        width: 100%;
+        margin-bottom: 1.2rem;
+  .mat-form-field-infix {
+    padding-top: 1.2rem !important; 
+  }
+
+  .mat-form-field-label {
+    margin-top: -0.6rem; 
+  }
+        .mat-mdc-form-field-flex {
+          padding: 0.4rem 1rem;
+          background: rgba(0, 210, 255, 0.08);
+          border: 1px solid #00d2ff;
+          border-radius: 12px;
+          backdrop-filter: blur(8px);
+          box-shadow: 0 0 4px #00d2ff66;
+          min-height: 50px;
+        }
+
+      .mat-mdc-text-field-input {
+  padding: 0.8rem 1rem !important;
+  font-size: 1rem;
+  color: #ffffff !important;
+  line-height: 1.4;
+}
+
+
+        .mat-form-field-label {
+          color: #edeff0;
+          padding: 0 0.25rem;
+          background: #0f172a;
+          z-index: 1;
+        }
+
+        .mat-mdc-form-field-outline {
+          legend {
+            padding: 0 0.4rem;
+          }
+        }
+
+        .mat-icon-button {
+          color: #f7f6f6;
+        }
+      }
+
+      mat-hint ul {
+        padding-left: 1.2rem;
+        list-style: disc;
+        text-align: left;
+        font-size: 0.85rem;
+        margin-top: 0.3rem;
+
+        li {
+          color: #ccc;
+          margin-bottom: 0.2rem;
+
+          &.valid {
+            color: #00d2ff;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .tipo-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        label {
+          cursor: pointer;
+          display: flex;
+
+          input {
+            display: none;
+          }
+
+          span {
+            width: 140px;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+          }
+
+          input:checked + span {
+            background: linear-gradient(to right, #00d2ff, #3a47d5);
+            border-color: #00d2ff;
+            color: white;
+          }
+        }
+      }
+
+      mat-checkbox {
+        color: #cbd5e1;
+
+        a {
+          color: #38bdf8;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .submit-button {
+        margin-top: 1rem;
+        background: linear-gradient(to right, #00d2ff, #3a47d5);
+        color: rgb(5, 5, 5);
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 0.8rem;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(to right, #00bde0, #2d3eb2);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+.password-requisitos {
+  font-size: 0.85rem;
+  text-align: left;
+  margin: 0.3rem 0 0 0;
+  padding-left: 1.2rem;
+
+  li {
+    color: #ccc;
+    margin-bottom: 0.2rem;
+
+    &.valid {
+      color: #00d2ff;
+      font-weight: 600;
+    }
+  }
+}
+.info-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  width: 100%;
+}
+
+.password-requisitos {
+  font-size: 0.85rem;
+  text-align: left;
+  margin: 0.3rem 0 0;
+  padding-left: 1.2rem;
+
+  li {
+    color: #ccc;
+    margin-bottom: 0.2rem;
+
+    &.valid {
+      color: #00d2ff;
+      font-weight: 600;
+    }
+  }
+}
+.password-info {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+
+  span {
+    font-weight: 500;
+    color: #ccc;
+
+    &.valid {
+      color: #00d2ff;
+      font-weight: 600;
+    }
+  }
+}
+
+.success-message {
+  font-size: 0.85rem;
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .registro-page {
+    flex-direction: column;
+
+    .registro-left,
+    .registro-right {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .registro-left {
+      order: 2;
+      .logo {
+        width: 250px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+    }
+
+    .registro-right {
+      order: 1;
+      justify-content: flex-start;
+
+      .form-wrapper {
+        max-width: 100%;
+      }
+    }
+  }
+}

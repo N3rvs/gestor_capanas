@@ -1,8 +1,11 @@
 <nav class="navbar">
   <div class="navbar-inner">
-    <div class="navbar-logo">
-      <img src="assets/adorbit-logo.png" alt="AdOrbit Logo" />
-    </div>
+   <div class="navbar-logo">
+  <a routerLink="/" aria-label="Ir a Inicio">
+    <img src="assets/adorbit-logo.png" alt="AdOrbit Logo" />
+  </a>
+</div>
+
     <ul class="navbar-links desktop-menu">
       <li><a routerLink="/">Inicio</a></li>
       <li><a routerLink="/nosotros">Nosotros</a></li>
@@ -15,12 +18,6 @@
 
 <div class="navbar-actions">
   <button class="hamburger" (click)="menuAbierto = !menuAbierto">&#9776;</button>
-
-<a routerLink="/login" class="login-mobile" aria-label="Login">
-  <img src="assets/login.png" alt="Login icon" class="alien-icon-img" />
-</a>
-
-
 
 
 </div>

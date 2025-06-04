@@ -26,6 +26,7 @@ export class CuentaLandingComponent {
   constructor(private router: Router) {}
 
   crearCuenta(tipo: 'musico' | 'comercio') {
-    this.router.navigate([tipo === 'musico' ? '/registro-musico' : '/registro-comercial']);
+     console.log('Redirigiendo a:', tipo);
+    this.router.navigate(['registro']);
   }
 }

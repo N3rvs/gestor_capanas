@@ -1,0 +1,84 @@
+<div class="registro-page">
+  <!-- Lado izquierdo -->
+  <div class="registro-left">
+    <div class="branding">
+      <img src="assets/logo_solo.png" alt="Logo" class="logo" />
+      <h2>Lanza y gestiona como un profesional</h2>
+      <p>Google Ads, Meta, campañas, todo desde un solo lugar.</p>
+    </div>
+  </div>
+
+  <!-- Lado derecho -->
+  <div class="registro-right">
+    <div class="home-link">
+  <a routerLink="/cuentas" title="Volver al inicio" (click)="irASeleccionCuenta()">
+    <mat-icon>arrow_back</mat-icon>
+  </a>
+</div>
+
+    <div class="form-wrapper">
+      <h1>Crear cuenta</h1>
+
+      <form [formGroup]="registroForm" (ngSubmit)="registrar()">
+        <!-- Email -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+
+        <!-- Requisitos de contraseña -->
+        <div class="password-info" *ngIf="f['password'].touched || f['password'].value">
+          La contraseña debe tener al menos
+          <span [class.valid]="tieneMinimo8">8 caracteres</span>,
+          <span [class.valid]="tieneMayuscula">una letra mayúscula</span>,
+          <span [class.valid]="tieneNumero">un número</span> y
+          <span [class.valid]="tieneEspecial">un símbolo</span>.
+        </div>
+
+        <!-- Contraseña -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
+          <button mat-icon-button matSuffix type="button" (click)="hidePassword = !hidePassword">
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+
+        <!-- Confirmar contraseña -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Confirmar contraseña</mat-label>
+          <input matInput [type]="hideConfirm ? 'password' : 'text'" formControlName="confirmPassword" />
+          <button mat-icon-button matSuffix type="button" (click)="hideConfirm = !hideConfirm">
+            <mat-icon>{{ hideConfirm ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <!-- Tipo de cuenta -->
+        <div class="tipo-toggle">
+          <label>
+            <input type="radio" formControlName="tipo" value="comercio" />
+            <span>Comercio</span>
+          </label>
+          <label>
+            <input type="radio" formControlName="tipo" value="musico" />
+            <span>Músico</span>
+          </label>
+        </div>
+
+        <!-- Términos -->
+        <mat-checkbox formControlName="terminos">
+          Acepto los <a href="/terminos" target="_blank">términos y condiciones</a>.
+        </mat-checkbox>
+
+        <!-- Botón -->
+        <button mat-raised-button color="primary" class="submit-button" type="submit"
+          [disabled]="registroForm.invalid || cargando || registroExitoso">
+          <mat-spinner *ngIf="cargando" diameter="20"></mat-spinner>
+          <mat-icon *ngIf="registroExitoso">check_circle</mat-icon>
+          <span>Crear cuenta</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,16 @@
+
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #161212; 
+  background-color: #000000; 
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+  
 }
 .whatsapp-float {
   position: fixed;
@@ -38,3 +41,10 @@ html, body {
     100% { transform: translateY(0); }
   }
 }
+
+.mat-mdc-text-field-input {
+  padding-left: 3.5rem !important;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
